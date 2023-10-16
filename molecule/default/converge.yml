@@ -1,0 +1,5 @@
+---
+- name: "Include labocbz.deploy_mongodb playbook"
+  tags:
+      - "labocbz.deploy_mongodb"
+  ansible.builtin.import_playbook: "../../playbook.yml"
