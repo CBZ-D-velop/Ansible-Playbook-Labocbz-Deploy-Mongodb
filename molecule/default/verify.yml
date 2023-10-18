@@ -2,6 +2,20 @@
 # Don't forget to keep this file updated
 # molecule/<scenario>/verify.yml
 - name: "Verify"
-  hosts: "all"
+  hosts: "all:&MONGODB"
   gather_facts: false
   tasks:
+
+    - name: "Get MongoDB service current state"
+      register: install_mongod_service_status
+      failed_when: not install_mongod_service_status.status.ActiveState == 'active'
+      ignore_errors: true
+      ansible.builtin.systemd:
+        name: "mongod"
+
+    - name: "Check MongoDB connectivity"
+      ignore_errors: true
+      ansible.builtin.wait_for:
+        host: "{{ inventory_hostname }}"
+        port: "{{ inv_install_mongodb_port }}"
+        timeout: 120
