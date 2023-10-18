@@ -26,7 +26,7 @@ inv_install_mongodb_keyfile: "/etc/mongodb/keyFile"
 inv_install_mongodb_admin_login: "admin"
 inv_install_mongodb_admin_password: "admin"
 
-inv_mariadb_cert_bundles:
+inv_mongodb_cert_bundles:
   - name: "My-Local-Ansible-Root-CA.pem.crt"
     type: "CA"
     src: "/tmp/My-Local-Ansible-Root-CA.pem.crt"
