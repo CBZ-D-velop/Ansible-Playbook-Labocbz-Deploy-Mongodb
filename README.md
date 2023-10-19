@@ -18,7 +18,15 @@
 
 An Ansible playbook to deploy and configure Mongodb on your host.
 
+This playbook simplifies the installation and configuration of MongoDB on a server. It also performs security updates, setting up an admin user and enabling password-based or non-password-based authentication. It's important to note that cluster mode is not currently supported.
+
+With this playbook, you can effortlessly set up and secure a MongoDB instance on your server, ensuring that it meets your specific requirements for data management and storage.
+
 ## Deployment diagramm
+
+![](assets/Ansible-Playbook-Labocbz-Deploy-Mongodb.drawio.svg)
+
+This represents a possible deployment accomplished with this playbook. We can observe a MongoDB service component and its subsystem. A MongoDB instance is installed on a machine, and clients and services can access it with encryption in place.
 
 ## Tests and simulations
 
@@ -92,6 +100,12 @@ Here you can put your change to keep a trace of your work and decisions.
 
 * First init of this playbook with the bootstrap_playbook playbook by Lord Robin Crombez
 
+### 2023-10-16: Fix and Push
+
+* Readme added
+* Schema added
+* Playbook install and congigure Mongodb
+
 ## Authors
 
 * Lord Robin Crombez
@@ -100,3 +114,4 @@ Here you can put your change to keep a trace of your work and decisions.
 
 * [Ansible playbook documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_playbooks.html)
 * [Ansible Molecule documentation](https://molecule.readthedocs.io/)
+* [labocbz.install_mongodb](https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Install-Mongodb.git)
