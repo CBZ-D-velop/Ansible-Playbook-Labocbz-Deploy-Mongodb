@@ -5,10 +5,6 @@ inv_install_mongodb_prepare_host_users:
 
 inv_install_mongodb: true
 
-inv_install_mongodb_prepare_host_users:
-  - login: "mongodb"
-    group: "mongodb"
-
 inv_install_mongodb_version: "7.0"
 inv_install_mongodb_distribution_release: "{{ ansible_distribution_release | lower }}"
 inv_install_mongodb_architecture: "{{ ansible_architecture | lower }}"
