@@ -4,7 +4,7 @@ inv_install_mongodb_prepare_host_users:
     group: "mongodb"
 
 inv_install_mongodb: true
----
+
 inv_install_mongodb_prepare_host_users:
   - login: "mongodb"
     group: "mongodb"
