@@ -1,4 +1,10 @@
 ---
+inv_install_mongodb_prepare_host_users:
+  - login: "mongodb"
+    group: "mongodb"
+
+inv_install_mongodb: true
+
 inv_install_mongodb_version: "7.0"
 inv_install_mongodb_distribution_release: "{{ ansible_distribution_release | lower }}"
 inv_install_mongodb_architecture: "{{ ansible_architecture | lower }}"
@@ -45,6 +51,6 @@ inv_mongodb_cert_bundles:
     dest: "{{ inv_install_mongodb_ssl_path }}"
     #src_user: "myUser"
     #src_password: "secretPassword"
-    dest_user: "root"
-    dest_group: "root"
+    dest_user: "{{ inv_install_mongodb_db_user }}"
+    dest_group: "{{ inv_install_mongodb_db_group }}"
     dest_mode: "0700"
