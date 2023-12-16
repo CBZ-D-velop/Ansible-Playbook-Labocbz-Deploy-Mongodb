@@ -106,6 +106,10 @@ Here you can put your change to keep a trace of your work and decisions.
 * Schema added
 * Playbook install and congigure Mongodb
 
+### 2023-12-16: System users
+
+* Role can now use system users and address groups
+
 ## Authors
 
 * Lord Robin Crombez
