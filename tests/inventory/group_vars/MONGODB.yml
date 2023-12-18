@@ -31,6 +31,9 @@ inv_install_mongodb_ssl_ca_file: "/etc/mongodb-ca.pem"
 inv_install_mongodb_admin_login: "admin"
 inv_install_mongodb_admin_password: "admin"
 
+inv_logrotate_mongodb_configurations:
+  - "mongodb"
+
 inv_mongodb_cert_bundles:
   - name: "My-Local-Ansible-Root-CA.pem.crt"
     type: "CA"

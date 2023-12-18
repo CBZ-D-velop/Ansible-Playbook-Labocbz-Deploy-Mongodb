@@ -110,6 +110,13 @@ Here you can put your change to keep a trace of your work and decisions.
 
 * Role can now use system users and address groups
 
+### 2023-12-18: Logs and tests
+
+* Added real tests for Mongodb
+* Added log handling
+* Removed free strategy
+* Remonved remote user root
+
 ## Authors
 
 * Lord Robin Crombez

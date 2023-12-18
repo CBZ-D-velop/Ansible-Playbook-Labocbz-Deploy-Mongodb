@@ -2,13 +2,9 @@
 - name: "Deploy Mongodb"
   hosts: "{{ tower_env | default([]) }}"
   gather_facts: true
-  remote_user: root
-  strategy: free
   become: true
   become_method: sudo
   become_user: root
-  tags:
-    - "labocbz.install_mongodb"
 
   tasks:
     - name: "Install Mongodb"
@@ -68,3 +64,11 @@
             install_mongodb_ssl_ca_file: "{{ inv_install_mongodb_ssl_ca_file }}"
           ansible.builtin.include_role:
             name: "labocbz.install_mongodb"
+
+        - name: "Include labocbz.add_logrotate_confs"
+          tags:
+            - "labocbz.add_logrotate_confs"
+          vars:
+            logrotate_configurations: "{{ inv_logrotate_mongodb_configurations }}"
+          ansible.builtin.include_role:
+            name: "labocbz.add_logrotate_confs"
