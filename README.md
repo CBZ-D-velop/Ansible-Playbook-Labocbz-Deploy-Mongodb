@@ -122,7 +122,7 @@ Here you can put your change to keep a trace of your work and decisions.
 * Imported new CICD
 * Rework global on readme
 * Rename of vars __ and refacto
-* Playbook cant be idempotent, caused by the reset of the admin password
+* Playbook cant be idempotent, caused by the reset of the admin password with the role
 
 ## Authors
 
