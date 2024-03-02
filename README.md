@@ -117,6 +117,13 @@ Here you can put your change to keep a trace of your work and decisions.
 * Removed free strategy
 * Remonved remote user root
 
+### 2024-03-02: Remastered
+
+* Imported new CICD
+* Rework global on readme
+* Rename of vars __ and refacto
+* Playbook cant be idempotent, caused by the reset of the admin password
+
 ## Authors
 
 * Lord Robin Crombez
