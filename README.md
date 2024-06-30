@@ -24,7 +24,7 @@ With this playbook, you can effortlessly set up and secure a MongoDB instance on
 
 ## Deployment diagramm
 
-![](assets/Ansible-Playbook-Labocbz-Deploy-Mongodb.drawio.svg)
+![Ansible-Playbook-Labocbz-Deploy-Mongodb](assets/Ansible-Playbook-Labocbz-Deploy-Mongodb.drawio.svg)
 
 This represents a possible deployment accomplished with this playbook. We can observe a MongoDB service component and its subsystem. A MongoDB instance is installed on a machine, and clients and services can access it with encryption in place.
 
@@ -35,7 +35,6 @@ This represents a possible deployment accomplished with this playbook. We can ob
 You have to run multiples tests. *tests with an # are mandatory*
 
 ```MARKDOWN
-# lint
 # syntax
 # converge
 # idempotence
@@ -60,7 +59,6 @@ yamllint -c ./.yamllint .
 ansible-lint --config=./.ansible-lint .
 
 # Execute and test your playbook
-molecule lint
 molecule create
 molecule list
 molecule converge
@@ -123,6 +121,14 @@ Here you can put your change to keep a trace of your work and decisions.
 * Rework global on readme
 * Rename of vars __ and refacto
 * Playbook cant be idempotent, caused by the reset of the admin password with the role
+
+### 2024-05-19: New CI
+
+* Added Markdown lint to the CICD
+* Rework all Docker images
+* Change CICD vars convention
+* New workers
+* Removed all automation based on branch
 
 ## Authors
 
